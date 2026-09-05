@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Perfect Pair</title>
+    <link rel="stylesheet" href="cpp-frontend.css" />
+    <script src="cpp-frontend.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/cpp-frontend.html"><span class="brand-mark">◌</span> Your Perfect Pair</a>
+      <span class="header-note">Personalised glasses recommendations</span>
+    </header>
+
+    <main class="shell">
+      <section class="intro">
+        <p class="eyebrow">LOCAL C++ RECOMMENDATION ENGINE</p>
+        <h1>Find the frames<br /><em>that feel like you.</em></h1>
+        <p class="intro-copy">Answer four quick questions and get the same practical styling guide as the C++ program, presented beautifully in your browser.</p>
+      </section>
+
+      <section class="workspace">
+        <form id="pair-form" class="form-panel">
+          <div class="step-heading"><span>01</span><div><p class="eyebrow">Your proportions</p><h2>Choose your face shape</h2></div></div>
+          <div class="option-grid" id="shape-options">
+            <label class="choice"><input type="radio" name="shape" value="Oval" /><span>Oval</span><small>Balanced and softly rounded</small></label>
+            <label class="choice"><input type="radio" name="shape" value="Round" checked /><span>Round</span><small>Soft curves and similar width</small></label>
+            <label class="choice"><input type="radio" name="shape" value="Square" /><span>Square</span><small>Defined jaw and even width</small></label>
+            <label class="choice"><input type="radio" name="shape" value="Heart" /><span>Heart</span><small>Wider forehead, tapered chin</small></label>
+            <label class="choice"><input type="radio" name="shape" value="Diamond" /><span>Diamond</span><small>Cheekbones are the focal point</small></label>
+            <label class="choice"><input type="radio" name="shape" value="Oblong" /><span>Oblong</span><small>Longer than it is wide</small></label>
+          </div>
+
+          <div class="form-divider"></div>
+          <div class="step-heading"><span>02</span><div><p class="eyebrow">Your palette</p><h2>Choose your undertone</h2></div></div>
+          <div class="tone-options">
+            <label class="tone-choice"><input type="radio" name="tone" value="Warm" checked /><span class="tone-dot warm"></span><b>Warm</b><small>Golden, peachy, or olive</small></label>
+            <label class="tone-choice"><input type="radio" name="tone" value="Cool" /><span class="tone-dot cool"></span><b>Cool</b><small>Pink, rosy, or blue</small></label>
+            <label class="tone-choice"><input type="radio" name="tone" value="Neutral" /><span class="tone-dot neutral"></span><b>Neutral</b><small>A little of both</small></label>
+          </div>
+
+          <div class="form-divider"></div>
+          <div class="step-heading"><span>03</span><div><p class="eyebrow">Your everyday</p><h2>Tell us what they are for</h2></div></div>
+          <label class="field-label" for="purpose">Main use</label>
+          <input id="purpose" name="purpose" type="text" value="reading and long screen time" placeholder="Reading, driving, sports..." />
+          <label class="field-label" for="prescription">Prescription strength <small>(optional)</small></label>
+          <input id="prescription" name="prescription" type="text" placeholder="e.g. -3.25 both eyes" />
+          <button class="submit-button" type="submit">Show my perfect pair <span>→</span></button>
+        </form>
+
+        <aside class="preview-panel">
+          <div class="preview-top"><span class="status-dot"></span><span>LIVE PREVIEW</span></div>
+          <div class="glasses-illustration" aria-hidden="true"><span></span><i></i><span></span></div>
+          <p class="preview-kicker">YOUR GUIDE</p>
+          <h2 id="preview-shape">Round</h2>
+          <p id="preview-copy">Angular contrast will add definition to softer facial curves.</p>
+          <div class="preview-rule"></div>
+          <p class="preview-caption">Your result will include frame styles, sizing, colours, lens options, and what to avoid.</p>
+        </aside>
+      </section>
+
+      <section id="result" class="result-panel" hidden>
+        <div class="result-heading"><div><p class="eyebrow">YOUR PERFECT PAIR</p><h2 id="result-title">Round face shape</h2><p id="result-summary"></p></div><button id="reset-button" class="text-button" type="button">Start again ↗</button></div>
+        <div class="observation-row" id="observations"></div>
+        <div class="result-grid">
+          <article class="result-card"><p class="card-label">FRAME STYLES</p><div id="styles"></div></article>
+          <article class="result-card"><p class="card-label">STARTING SIZE RANGE</p><div class="measurements"><div><b>132–138</b><small>Frame width / mm</small></div><div><b>38–44</b><small>Lens height / mm</small></div><div><b>18–20</b><small>Bridge / mm</small></div></div><p class="card-note">The frame should sit level, with your pupils near the centre of each lens and no pressure at the temples.</p></article>
+          <article class="result-card"><p class="card-label">COLOUR PALETTE</p><div id="colors"></div></article>
+          <article class="result-card"><p class="card-label">LENS &amp; COMFORT</p><div id="lenses"></div></article>
+        </div>
+        <article class="avoid-card"><p class="card-label">TRY TO AVOID</p><div id="avoid"></div></article>
+        <p class="disclaimer">Style guidance only, not medical or optometry advice. Confirm prescription and lens choices with a qualified optician.</p>
+      </section>
+    </main>
+  </body>
+</html>
